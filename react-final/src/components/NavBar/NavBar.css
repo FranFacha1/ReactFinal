@@ -1,0 +1,57 @@
+.div-buttons {
+    width: 100%;
+    background-color: #D4F4F9;
+    height: 100px;
+}
+
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+
+}
+
+.img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid #30656D;
+    display: flex;
+    margin-left: 30px;
+    
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+
+}
+
+.button {
+    margin-left: 30px;
+    padding: 5px;
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid #000000;
+    background-color: #E7F6F9;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.button:focus {
+    outline: white 1px solid;
+    background-color: #30656D;
+    color: white;
+}
+
+
+.navlink {
+    text-decoration: none;
+}
