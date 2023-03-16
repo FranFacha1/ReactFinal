@@ -1,18 +1,29 @@
+body {
+    
+}
+
 .div-carrito {
     display: flex;
+    align-items: center;
 }
 
 .carrito {
-    height: 50px;
+    height: 30px;
     margin-right: 30px;
 
+    transition: 1s;
 }
 
-p {
-    margin-right: 20px;
-    background-color: #D73110;
-    width: 30px;
+.p {
+    margin: 10px;
+    width: 100%;
     border-radius: 20px;
     color: #fafafa;
-    text-align: center;
+    background: red;
+    translate: -40px -20px;
+    
+}
+
+.carrito:hover {
+    border-bottom: 1px solid #F1EAEA;
 }

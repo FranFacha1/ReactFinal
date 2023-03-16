@@ -1,0 +1,90 @@
+.itemContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1e2227;
+    color: #d7dae0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    color: #d7dae0;
+    text-decoration: none;
+}
+
+.item .imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: #2f3336;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.item .imgContainer img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item .itemInfo{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.item .itemInfo .itemName{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.item .itemInfo .itemPrice{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.bottomContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.itemCount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    border: 1px solid #d7dae0;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.botonItem {
+    background-color: #322F2F;
+    color: #F1EAEA;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.botonItem:hover {
+    background-color: #F1EAEA;
+    color: #322F2F;
+}

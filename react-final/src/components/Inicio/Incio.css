@@ -1,0 +1,30 @@
+.incio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #fff; */
+    margin-top: 20px;
+}
+
+.incio-div {
+    
+}
+
+.mufa {
+    margin-top: 40px;
+}
+
+.titulo {
+    /* margin-top: -5px; */
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 2.5rem;
+    width: 100%;
+    transition: 1s;
+}
+
+.titulo:hover {
+    color: #F1EAEA;
+}

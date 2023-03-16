@@ -6,7 +6,7 @@ function Carrito() {
   return (
     <div className='div-carrito'>
       <img className='carrito' src={ftoCarrito}></img>
-      <p>10</p>
+      <p className='p'>1000</p>
     </div>
   )
 }
