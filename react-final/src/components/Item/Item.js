@@ -1,8 +1,46 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "./Item.css"
 
 
+
 const Item = ({ imgSrc, name, descripcion, precio, productLink }) => {
+
+
+  // CONTADOR
+  const [contador, setContador] = useState(0);
+
+  const sumar = () => {
+    setContador(contador + 1);
+  };
+
+  const restar = () => {
+    if (contador > 0) {
+      setContador(contador - 1);
+    }
+  };
+
+  // UseEffect
+
+  useEffect(() => {
+    // montar || cuando termina de cargar
+
+    console.log("el componente esta listo");
+
+    if (contador > 0) {
+      console.log("contador es mayor");
+    } else {
+      console.log("contador es menor");
+    }
+
+    return () => {
+      // desmontar o cuando muere
+
+      console.log("el componente murio");
+    };
+  }, [
+    contador,
+    // Cuando hay algun cambio || mostrar cambios
+  ]);
 
   return (
     <div className='itemContainer'>
@@ -19,9 +57,9 @@ const Item = ({ imgSrc, name, descripcion, precio, productLink }) => {
 
 <div className='bottomContainer'>
           <div className='itemCount'>
-            <button className='botonItem'>-</button>
-            <div className='cantidad'>1</div>
-            <button className='botonItem'>+</button>
+            <button onClick={restar} className='botonItem'>-</button>
+            <div className='cantidad'>{contador}</div>
+            <button onClick={sumar} className='botonItem'>+</button>
           </div>
             <button className='botonItem'>Comprar</button>
         </div>
