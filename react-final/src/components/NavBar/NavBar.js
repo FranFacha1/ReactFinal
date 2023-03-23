@@ -1,8 +1,9 @@
 import React from 'react'
 import "./NavBar.css"
 import Carrito from './Carrito/Carrito'
-import mufa from "../assets/image/logo1.png"
+import mufa from "../../assets/image/logo1.png"
 import {routes} from "../../models/routes"
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 
@@ -18,9 +19,9 @@ const NavBar = () => {
                 </div>
 
                 <div className='buttons' >
-                    <a  href={routes.home} className='button'>Incio</a>
-                    <a  href={routes.products} className='button'>Productos</a>
-                    <a  href={routes.cart}className='button'>Carrito</a>
+                    <Link  to={routes.home} className='button'>Incio</Link>
+                    <Link  to={routes.products} className='button'>Productos</Link>
+                    <Link  to={routes.cart} className='button'>Carrito</Link>
                 </div>
 
                 <Carrito></Carrito>

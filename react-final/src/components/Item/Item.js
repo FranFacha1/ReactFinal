@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import categorias from "../../mocks/categorias";
 import "./Item.css"
 
 
 
-const Item = ({ imgSrc, name, descripcion, precio, productLink }) => {
-
+const Item = ({ imgSrc, name, descripcion, precio, productLink, categoriaParam}) => {
 
   // CONTADOR
   const [contador, setContador] = useState(0);
@@ -19,32 +20,12 @@ const Item = ({ imgSrc, name, descripcion, precio, productLink }) => {
     }
   };
 
-  // UseEffect
-
-  useEffect(() => {
-    // montar || cuando termina de cargar
-
-    console.log("el componente esta listo");
-
-    if (contador > 0) {
-      console.log("contador es mayor");
-    } else {
-      console.log("contador es menor");
-    }
-
-    return () => {
-      // desmontar o cuando muere
-
-      console.log("el componente murio");
-    };
-  }, [
-    contador,
-    // Cuando hay algun cambio || mostrar cambios
-  ]);
+  //busco la categoria
+  const categoria = categorias.find((categoria) => categoria.id === categoriaParam);
 
   return (
     <div className='itemContainer'>
-            <a href={productLink} className='item'>
+      <Link to={productLink} className='item'>
       <div className='imgContainer'>
         <img src={imgSrc}></img>
       </div>
@@ -53,8 +34,10 @@ const Item = ({ imgSrc, name, descripcion, precio, productLink }) => {
         <div className='itemDesc'>{descripcion}</div>
           <div className='itemPrice'>{"$" + precio}</div>
       </div>
-      </a>
-
+      </Link>
+      <div className='itemCategory'>
+        <p>{categoria.name}</p>
+      </div>
 <div className='bottomContainer'>
           <div className='itemCount'>
             <button onClick={restar} className='botonItem'>-</button>

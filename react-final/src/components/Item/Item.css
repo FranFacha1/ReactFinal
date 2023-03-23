@@ -82,9 +82,19 @@
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .botonItem:hover {
     background-color: #F1EAEA;
     color: #322F2F;
+}
+
+.itemCategory{
+    max-width: max-content;
+    font-size: 1rem;
+    background: #F1EAEA1a;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import mufa from "../assets/image/logo1.png"
+import mufa from "../../assets/image/logo1.png"
 import "./Incio.css"
 
 
